@@ -4,8 +4,6 @@ const Message = require("../models/message");
 
 router.get("/", (req, res) => res.send("welcome to messages route"));
 
-module.exports = router;
-
 router.post("/", async (req, res) => {
   try {
     const data = { ...req.body, location: "sent" };
@@ -69,3 +67,5 @@ router.delete("/:messageId", async (req, res) => {
     res.status(400).json({ message: "An error occurred", error });
   }
 });
+
+module.exports = router;

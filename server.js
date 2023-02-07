@@ -13,6 +13,7 @@ const userRouter = require("./routes/user");
 const messageRouter = require("./routes/message");
 const analyticsRouter = require("./routes/analytics");
 const partnerRouter = require("./routes/partner");
+const accountRouter = require("./routes/account");
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,6 +26,7 @@ app.use("/user", userRouter);
 app.use("/message", messageRouter);
 app.use("/analytics", analyticsRouter);
 app.use("/partners", partnerRouter);
+app.use("/account", accountRouter);
 
 const port = process.env.PORT || 5000;
 
